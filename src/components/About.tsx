@@ -5,14 +5,14 @@ const AboutSection: React.FC = () => {
   // 1. Data structure with photo and text
   const galleryData = [
     {
-      src: '/images/1.jpg',
+      src: `${import.meta.env.BASE_URL}images/1.jpg`,
       text: `It begins with the feeling of falling for him in a way that felt natural. 
       Being with him made me feel strangely fearless about trying to love again. I let myself love without hesitation and fear.
       Happiness came just from talking to him, hearing his voice, or imagining small moments we could share together. 
       Loving him felt like discovering a part of my heart that I didn’t know was still capable of feeling that open and young.`,
     },
     {
-      src: '/images/3.jpg',
+      src: `${import.meta.env.BASE_URL}images/3.jpg`,
       text: ` 
       As my feelings grew, they became quieter but deeper and more rooted. My love for him became something that lived in the background of everything I do.
       It holds warmth, but sometimes feels heavy with thoughts I cannot fully explain.
@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
       `,
     },
     {
-      src: '/images/6.jpg',
+      src: `${import.meta.env.BASE_URL}images/6.jpg`,
       text: `
       
       I have always seen him as a work of art. He is art — someone whose presence feels beautiful in a way that is difficult to fully explain. 
@@ -29,7 +29,7 @@ const AboutSection: React.FC = () => {
       I love him not only for how him made me feel, but for who him are — someone rare and meaningful in my life. Cariño is my quiet love letter to him. `,
     },
     {
-      src: '/images/8.jpg',
+      src: `${import.meta.env.BASE_URL}images/8.jpg`,
       text: `Loving him made me want life to be kind to him. I have always seen his strength, even in moments when him might not see it himself. 
       I want him to continue growing, blooming, and becoming everything him are meant to be even in moments when things feel heavy. And I'm always willing to be there as he grows.`,
     },

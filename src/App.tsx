@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const currentTrack = playlist[currentTrackIndex];
-  const songPath = `/songs/${currentTrack.filename}`;
+  const songPath = `${import.meta.env.BASE_URL}songs/${currentTrack.filename}`;
 
   // Update audio source when track changes
   useEffect(() => {
