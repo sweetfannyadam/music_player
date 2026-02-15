@@ -50,12 +50,12 @@ const AboutSection: React.FC = () => {
       
       I have always seen him as a work of art. He is art — someone whose presence feels beautiful in a way that is difficult to fully explain. 
       He brings calm into my world simply by being himself. 
-      I love him not only for how him made me feel, but for who him are — someone rare and meaningful in my life. Cariño is my quiet love letter to him. `,
+      I love him not only for how he made me feel, but for who he is — someone rare and meaningful in my life. Cariño is my quiet love letter to him. `,
     },
     {
       src: `${import.meta.env.BASE_URL}images/8.jpg`,
       text: `Loving him made me want life to be kind to him. I have always seen his strength, even in moments when him might not see it himself. 
-      I want him to continue growing, blooming, and becoming everything him are meant to be even in moments when things feel heavy. And I'm always willing to be there as he grows.`,
+      I want him to continue growing, blooming, and becoming everything he is meant to be even in moments when things feel heavy. And I'm always willing to be there as he grows.`,
     },
   ];
 
@@ -90,8 +90,8 @@ const AboutSection: React.FC = () => {
           feelings, or imagination, but fully in our shared reality — in moments
           we could hold, places we could stand together, and memories we could
           create side by side. But wherever life takes us, I hope there is a
-          small place in his heart that remembers him were loved that fully,
-          that quietly, and that truthfully.{' '}
+          small place in his heart that remembers he was loved that fully, that
+          quietly, and that truthfully.{' '}
         </p>
       </div>
     </div>
