@@ -18,7 +18,6 @@ const Controls: React.FC<ControlsProps> = ({
   onStop,
   onNext,
   onRewind,
-  onForward,
   volume,
   onVolumeChange,
 }) => {

@@ -15,9 +15,9 @@ const AboutSection: React.FC = () => {
       src: '/images/3.jpg',
       text: ` 
       As my feelings grew, they became quieter but deeper and more rooted. My love for him became something that lived in the background of everything I do.
-      It holds warmth, but sometimes feels heavy with thoughts I cannot fully explain. It made me aware of how strongly someone can live inside my thoughts and how emotions can exist in ways that don’t always have clear answers.  
-      None of these feelings cancel each other out. They exist together, shaping how I carry him in my story.
-      
+      It holds warmth, but sometimes feels heavy with thoughts I cannot fully explain.
+      Every layer, every contradiction, made me aware of how strongly someone can live inside my thoughts and how emotions can exist in ways that don’t always have clear answers.  
+      None of these feelings cancel each other out. They exist together, shaping how I understand him, how I understand myself, and how I carry him within my story.
       `,
     },
     {
