@@ -102,7 +102,7 @@
 
 .about-conclusion {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 12px;
   line-height: 1.6;
   color: #717171;
   font-family: 'IBM Plex Mono', monospace; /* Or any elegant font */
@@ -144,7 +144,7 @@
 }
 
 .item-caption p {
-  font-size: 1rem;
+  font-size: 12px;
   line-height: 1.6;
   color: #717171;
   font-family: 'IBM Plex Mono', monospace; /* Or any elegant font */
