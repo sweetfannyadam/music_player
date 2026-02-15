@@ -1,0 +1,132 @@
+/* Playlist styling */
+.playlist-container {
+  width: 420px;
+  /* background: linear-gradient(
+    135deg,
+    rgba(230, 126, 34, 0.05),
+    rgba(230, 126, 34, 0.02)
+  ); */
+  /* border: 2px solid #e67e22; */
+  padding: 15px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+  display: flex;
+  flex-direction: column;
+  /* gap: 15px; */
+}
+
+.playlist-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e67e22;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px dotted #e67e22;
+  opacity: 0.8;
+}
+
+.playlist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.playlist-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.playlist-list::-webkit-scrollbar-track {
+  background: rgba(230, 126, 34, 0.1);
+  border-radius: 3px;
+}
+
+.playlist-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #e67e22, #ff9800);
+  border-radius: 3px;
+}
+
+.playlist-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 3px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+.playlist-track:hover {
+  background: rgba(230, 126, 34, 0.1);
+  border-left-color: #e67e22;
+  transform: translateX(4px);
+}
+
+.playlist-track.active {
+  background: linear-gradient(
+    135deg,
+    rgba(230, 126, 34, 0.2),
+    rgba(230, 126, 34, 0.1)
+  );
+  border-left-color: #e67e22;
+  box-shadow: 0 0 10px rgba(230, 126, 34, 0.3);
+}
+
+.track-num {
+  color: #e67e22;
+  font-weight: bold;
+  min-width: 25px;
+  opacity: 0.7;
+}
+
+.track-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.track-title {
+  color: #e67d2286;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-artist {
+  color: #999;
+  font-size: 11px;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-duration {
+  color: #888;
+  font-size: 11px;
+  min-width: 35px;
+  text-align: right;
+  opacity: 0.6;
+}
+
+.playlist-track.active .track-duration {
+  color: #e67e22;
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .playlist-container {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .playlist-list {
+    max-height: 250px;
+  }
+}

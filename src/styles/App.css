@@ -1,0 +1,119 @@
+/* .app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.player-container {
+  perspective: 1000px;
+  margin-bottom: 40px;
+}
+
+.cassette-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.control-panel {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .control-panel {
+    width: 100%;
+    max-width: 420px;
+  }
+} */
+
+.app {
+  background-color: #fefaf4;
+  min-height: 100vh;
+  color: #fefaf4;
+  padding: 40px 20px;
+}
+
+.main-layout {
+  max-width: 1200px; /* Limits width so it doesn't get too stretched on huge monitors */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px; /* Space between the rows */
+}
+
+/* THE TOP ROW */
+.top-row {
+  display: flex;
+  flex-direction: row; /* Side by side */
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* PLAYER COLUMN (LEFT) */
+.player-column {
+  background: #fefaf4;
+  padding: 25px;
+  /* border-radius: 15px;
+  border: 1px solid #333; */
+}
+
+.cassette-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* PLAYLIST COLUMN (RIGHT) */
+.playlist-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid #333; */
+  /* padding: 25px; */
+  /* max-height: 550px; Keeps it aligned with the player height */
+  /* overflow-y: auto; Scroll if playlist is long */
+}
+
+/* CANVA ROW (MIDDLE) */
+.canva-row {
+  width: 100%;
+}
+
+/* ABOUT ROW (BOTTOM) */
+.about-row {
+  width: 100%;
+}
+
+.collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This crops the image to fill the box without stretching */
+  transition: transform 0.6s ease;
+}
+
+/* RESPONSIVE: Stack them on top of each other on small screens */
+@media (max-width: 900px) {
+  .top-row {
+    flex-direction: column;
+  }
+
+  .player-column,
+  .playlist-column {
+    width: 100%;
+  }
+}

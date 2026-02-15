@@ -1,0 +1,117 @@
+/* Reel container */
+.reel-container {
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+/* Reel styling - white circles */
+.reel {
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(
+    circle at 35% 35%,
+    #ffffff 0%,
+    #f8f8f8 40%,
+    #e8e8e8 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 2px 8px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.reel-center {
+  width: 8px;
+  height: 8px;
+  background: #333333;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.reel-ring {
+  position: absolute;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reel-ring.ring-1 {
+  width: 50px;
+  height: 50px;
+}
+
+.reel-ring.ring-2 {
+  width: 65px;
+  height: 65px;
+}
+
+.reel-ring.ring-3 {
+  width: 80px;
+  height: 80px;
+}
+
+/* Reel rotation animation */
+.reel.playing {
+  animation: spin-reel 1.5s linear infinite;
+}
+
+.reel-left.playing {
+  animation: spin-reel 1.5s linear infinite;
+}
+
+.reel-right.playing {
+  animation: spin-reel-reverse 1.5s linear infinite;
+}
+
+@keyframes spin-reel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reel-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .reel {
+    width: 70px;
+    height: 70px;
+  }
+
+  .reel-ring.ring-1 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reel-ring.ring-2 {
+    width: 55px;
+    height: 55px;
+  }
+
+  .reel-ring.ring-3 {
+    width: 68px;
+    height: 68px;
+  }
+}

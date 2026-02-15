@@ -1,0 +1,32 @@
+/* Song info display */
+.song-info {
+  width: 420px;
+  text-align: center;
+  padding: 12px 15px;
+  background: rgba(230, 126, 34, 0.08);
+  border-radius: 6px;
+  border-left: 3px solid #e67e22;
+}
+
+.song-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e67e22;
+  margin-bottom: 4px;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.5px;
+}
+
+.song-artist {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+@media (max-width: 480px) {
+  .song-info {
+    width: 100%;
+    max-width: 420px;
+  }
+}
