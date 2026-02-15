@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
     },
     {
       src: `${import.meta.env.BASE_URL}images/8.jpg`,
-      text: `Loving him made me want life to be kind to him. I have always seen his strength, even in moments when him might not see it himself. 
+      text: `Loving him made me want life to be kind to him. I have always seen his strength, even in moments when he might not see it himself. 
       I want him to continue growing, blooming, and becoming everything he is meant to be even in moments when things feel heavy. And I'm always willing to be there as he grows.`,
     },
   ];
