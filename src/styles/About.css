@@ -1,36 +1,56 @@
-/* 1. Set initial state for elements you want to fade */
+/* 1. Initial State for ALL browsers */
 .about-title,
 .about-description,
-.about-conclusion {
-  opacity: 0; /* Hidden by default for browsers that don't support the animation */
-  transition: opacity 0.8s ease-in-out; /* Fallback for manual state changes */
+.about-conclusion,
+.scroll-item {
+  opacity: 0;
+  transform: translateY(20px); /* Small slide up effect */
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
+  will-change: opacity, transform;
 }
 
-/* 2. Apply the Scroll-Driven Animation Logic */
+/* 2. JS Fallback Class (This makes it work on iPhone) */
+.about-title.is-visible,
+.about-description.is-visible,
+.about-conclusion.is-visible,
+.scroll-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 3. The Modern Chrome/Android Logic */
+/* We wrap this to ensure it doesn't conflict with the fallback */
 @supports (animation-timeline: view()) {
   .about-title,
   .about-description,
-  .about-conclusion {
+  .about-conclusion,
+  .scroll-item {
     animation: fade-in-out linear both;
     animation-timeline: view();
-    /* Adjust entry/exit % if you want them to stay visible longer or shorter */
     animation-range: entry 10% exit 90%;
-    opacity: 1; /* Ensure they are visible when animation is active */
+
+    /* Disable the JS transition so they don't fight each other */
+    transition: none;
   }
 
-  /* Reuse the same keyframes you already defined */
   @keyframes fade-in-out {
     0% {
       opacity: 0;
+      transform: translateY(30px);
     }
-    25% {
+    20% {
       opacity: 1;
+      transform: translateY(0);
     }
-    75% {
+    80% {
       opacity: 1;
+      transform: translateY(0);
     }
     100% {
       opacity: 0;
+      transform: translateY(-30px);
     }
   }
 }
@@ -50,7 +70,7 @@
 }
 
 .about-title {
-  font-size: 2rem;
+  font-size: 16px;
   font-weight: bold;
   color: #e67e22;
   margin-bottom: 20px;
@@ -63,7 +83,7 @@
 
 .about-description {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 12px;
   line-height: 1.6;
   color: #717171;
   font-family: 'IBM Plex Mono', monospace; /* Or any elegant font */

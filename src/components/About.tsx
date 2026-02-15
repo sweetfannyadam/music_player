@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/About.css';
 
 const AboutSection: React.FC = () => {
+  // 1. Fallback for iOS: Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            // Optional: remove this if you want it to stay visible after scrolling past
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    // Grab all elements that need to fade
+    const elements = document.querySelectorAll(
+      '.about-title, .about-description, .about-conclusion, .scroll-item',
+    );
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   // 1. Data structure with photo and text
   const galleryData = [
     {
@@ -54,7 +78,6 @@ const AboutSection: React.FC = () => {
         {galleryData.map((item, index) => (
           <div className='scroll-item' key={index}>
             <img src={item.src} alt={`Moment ${index}`} />
-            {/* 2. Added text div */}
             <div className='item-caption'>
               <p>{item.text}</p>
             </div>
@@ -68,7 +91,7 @@ const AboutSection: React.FC = () => {
           we could hold, places we could stand together, and memories we could
           create side by side. But wherever life takes us, I hope there is a
           small place in his heart that remembers him were loved that fully,
-          that quietly, and that truthfully.
+          that quietly, and that truthfully.{' '}
         </p>
       </div>
     </div>
